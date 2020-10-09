@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//RU">
+<HTML><HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=Windows-1251">
+<TITLE>Лабараторная 2.2</TITLE>
+<script language=JavaScript>
+var pos;
+function startMove(pos) {
+  if (pos == 0) {
+	var id = setInterval(move, 250);
+  } else if (pos == 1) {
+		clearInterval(id);
+  }
+  function move(){
+	document.s1.src = s2.src;
+	document.s2.src = s3.src;
+	document.s3.src = s4.src;
+	document.s4.src = s5.src;
+	document.s5.src = s6.src;
+	document.s6.src = s7.src;
+	document.s7.src = s8.src;
+	document.s8.src = s9.src;
+	document.s9.src = s10.src;
+	document.s10.src = s11.src;
+	document.s11.src = s12.src;
+	document.s12.src = s1.src;
+	}
+  return pos;
+}
+
+
+function start(){
+	var st = startMove(0);
+}
+	
+	
+	
+	
+function stop() {
+	var pause = startMove(1);
+}
+</script>
+<style>
+	.imgg {
+		position: absolute;
+	}
+	
+	.btn-group {
+		float: left;
+		position: relative;
+		top: 65px;
+	}
+	
+	body {
+		position: relative;
+	}
+</style>
+</HEAD>
+<BODY>
+	<img class="imgg" src="s1.gif" name="s1" width=400 height=60>
+	<img class="imgg" src="s2.gif" name="s2" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s3.gif" name="s3" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s4.gif" name="s4" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s5.gif" name="s5" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s6.gif" name="s6" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s7.gif" name="s7" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s8.gif" name="s8" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s9.gif" name="s9" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s10.gif" name="s10" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s11.gif" name="s11" hidden ="true" width=400 height=60>
+	<img class="imgg" src="s12.gif" name="s12" hidden ="true" width=400 height=60>
+	<form class="btn-group">
+		<button class="btn1" form onclick="start()">Старт</button>
+		<button class="btn2" form onclick="stop()">Стоп</button>
+		<button class="btn3" form onclick="faster()">Быстрее</button>
+		<button class="btn4" form onclick="slowly()">Меделеннее</button>
+	</form>
+</BODY>
+</HTML>
